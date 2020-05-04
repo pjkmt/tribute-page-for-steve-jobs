@@ -1,0 +1,148 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap');
+/* ---- */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: lightgray;
+}
+
+/* Box Shadow */
+#image, #title, .introduction, #img-caption, #tribute-info {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+/* ------------- */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 700px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+
+/* Heading/Title */
+#title {
+    text-align: center;
+}
+
+/* Image div */
+#img-div {
+    justify-content: center;
+}
+
+/* Image Caption */
+#img-caption {
+    text-align: center;
+    font-size: 15px;
+}
+
+/* Tribute Information */
+#tribute-info {
+    text-align: center;
+}
+
+/* Tribute Link */
+#tribute-link {
+    color: purple;
+    /* color: #CC0000; */
+    font-weight: bolder;
+}
+
+/* Class Center */
+.center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Image Hover Effect (Zoom) */
+.zoom {
+    /* padding: 50px; */
+    /* background-color: lightgray; */
+    transition: transform .2s; /* Animation */
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.zoom:hover {
+    transform: scale(1.1); /* (110% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+/* Using On :target in Image */
+li:target {
+    animation: highlight 30s;
+}
+@keyframes highlight {
+    0% {background: transparent;}
+    10% {background: purple;}
+    /* 10% {background: #F8F99A;} */
+    100% {background: transparent;}
+}
+/* :target {
+    animation: highlight 1s ease;
+    transform: translateX(20px);
+}
+@keyframes highlight {
+    0% {
+        border-left-color: navy;
+    }
+    100% {
+        border-left-color: white;
+    }
+}
+section > div {
+    border-left: 40px solid white;
+    padding: 10px;
+    transition: all 0.5s ease;
+    padding-right: 50px;
+    margin-left: -20px;
+} */
+
+#timeline {
+    padding-top: 25px;
+}
+
+ul.unorderListTimeline {
+    list-style-type: square;
+    text-align: left;
+}
